@@ -1,0 +1,219 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #dac400;
+  background: radial-gradient(circle at bottom, #da66c4 0, black 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: silver;
+    font-size: 4em;
+}
+
+/* Book */
+.book {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front {
+    backface-visibility: hidden;
+    border-left: 4px solid black;
+
+}
+
+.front, 
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transform-origin: left;
+    transition: transform 0.5s;
+
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  border-color: black;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+	
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* Customization */
+
+.book-title {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-family: "Lucida Handwriting", cursive; 
+	color: white;
+    
+}
+
+.cover-img {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+#f1 {
+	background: #a255d5;
+	
+	
+}
+#f2{
+	background: #a255d5;
+}
+
+#f3{
+background: #a255d5;
+}
+
+#b2{
+	padding: 20px;
+    text-align: center;
+    font-size: 5px;
+	font-family: cursive;
+	font: italic;
+	background: #7c7980;
+	position: center;
+}
+
+
+#b3{
+	background: #a255d5;
+
+}
+
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
+    justify-content: space-around;
+	font-family: cursive;
+	font: italic;
+	background: #7c7980;
+}
+
+
+#b1 h2 {
+	background: #777777;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#b1 p {
+    margin-bottom: 5px;
+}
+#b2 h1{
+	background: #777777;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+#b3 p {
+	margin-bottom: 40px;
+	font-size: 1em;
+	font-family: "Times New Roman", Times, serif;
+	font-color: black;
+}
+audio{
+	position:static;
+    font-size: 15px;
+    font-weight: bold;
+	
+}
